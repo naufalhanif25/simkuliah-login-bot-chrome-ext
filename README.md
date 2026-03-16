@@ -20,6 +20,7 @@ This extension was created to simplify the login process, which usually requires
 ## How to Install
 
 1. Download the `.crx` extension file.
+    [Download here](https://github.com/naufalhanif25/simkuliah-login-bot-chrome-ext/raw/refs/heads/main/extensions/chrome/simkuliah-login-bot-chrome-ext.crx)
 2. Open the extension page in Chrome:
     `chrome://extensions`
 3. Enable **Developer Mode** in the top right corner.
