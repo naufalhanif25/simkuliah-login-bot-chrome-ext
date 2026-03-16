@@ -1,0 +1,179 @@
+:root {
+    --log-bg-color: oklch(87.1% 0.15 154.449);
+    --warn-bg-color: oklch(92.4% 0.12 95.746);
+    --error-bg-color: oklch(88.5% 0.062 18.334);
+    --button-default-bg-colot: oklch(82.8% 0.189 84.429);
+    --button-hover-bg-color: oklch(76.9% 0.188 70.08);
+}
+
+* {
+    font-family:
+        "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    line-height: normal;
+    box-sizing: border-box;
+}
+
+body {
+    width: 320px;
+    height: fit-content;
+    overflow: hidden;
+}
+
+.header-container {
+    padding: 12px 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: end;
+}
+
+.header-container * {
+    font-size: 10pt;
+}
+
+.header-container a {
+    color: oklch(70.5% 0.015 286.067);
+    transition: color 100ms ease-out;
+    text-decoration: none;
+}
+
+.header-container a:hover {
+    color: oklch(55.2% 0.016 285.938);
+}
+
+.main-container {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.main-container button {
+    font-size: 11pt;
+    padding: 8px 16px;
+    border-radius: 24px;
+    border: none;
+    background-color: var(--button-default-bg-colot);
+    cursor: pointer;
+    transition: background-color 100ms ease-out;
+}
+
+.main-container button:hover {
+    background-color: var(--button-hover-bg-color);
+}
+
+.main-container button:active {
+    background-color: var(--button-default-bg-colot);
+}
+
+.main-container .head-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+.main-container .head-container .popup-title {
+    text-align: center;
+    font-size: 16pt;
+    line-height: normal;
+}
+
+.main-container .all-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.main-container .head-container .popup-logo {
+    width: 64px;
+    aspect-ratio: 1/1;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-container span * {
+    line-height: 0%;
+}
+
+.form-container span h2 {
+    font-size: 12pt;
+}
+
+.form-container span {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.form-container span input {
+    padding: 8px;
+    font-size: 11pt;
+    border-radius: 4px;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.form-container span input:focus {
+    outline-color: var(--button-hover-bg-color);
+}
+
+.password-entry {
+    display: flex;
+    flex-direction: row !important;
+    gap: 8px !important;
+    flex-wrap: nowrap;
+}
+
+.password-entry input {
+    width: max-content;
+    flex-grow: 1;
+}
+
+.password-entry button {
+    background-color: oklch(96.7% 0.001 286.375);
+    border-color: oklch(70.5% 0.015 286.067);
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 4px;
+}
+
+.password-entry button:hover {
+    background-color: oklch(92% 0.004 286.32);
+}
+
+.password-entry button:active {
+    background-color: oklch(96.7% 0.001 286.375);
+}
+
+#log-container {
+    display: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 10pt;
+    color: rgba(0, 0, 0, 75%);
+}
+
+.report-hyperlink {
+    font-size: 10pt;
+    line-height: 0%;
+    text-align: center;
+    color: oklch(70.5% 0.015 286.067);
+    text-decoration: none;
+    transition: color 100ms ease-out;
+}
+
+.report-hyperlink:hover {
+    color: oklch(55.2% 0.016 285.938);
+}
