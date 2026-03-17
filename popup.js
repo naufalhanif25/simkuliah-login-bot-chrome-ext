@@ -28,7 +28,7 @@ const loginButton = document.getElementById("login-button");
 const logContainer = document.getElementById("log-container");
 
 const loginOnProgress = () => {
-    loginButton.innerText = "Sedang proses... 📬";
+    loginButton.innerText = "Processing.. 📬";
     loginButton.style.opacity = "50%"
     loginButton.style.pointerEvents = "none";
 }
@@ -59,8 +59,7 @@ const solveCaptcha = async (imageBase64) => {
         const data = await res.json();
 
         return data.text;
-    }
-    catch (error) {
+    } catch (error) {
         displayLogMessage(
             error.message,
             CSSBgColors.errorBgColor,
@@ -80,10 +79,11 @@ document.addEventListener("DOMContentLoaded", async () => {
 loginButton.addEventListener("click", async () => {
     const npm = npmInput.value;
     const password = passwordInput.value;
+    const checkbox = document.getElementById("checkbox");
 
     if (!npm || !password) {
         displayLogMessage(
-            "NPM atau password tidak valid!",
+            "NPM or password is invalid!",
             CSSBgColors.warnBgColor,
         );
         return;
@@ -139,10 +139,13 @@ loginButton.addEventListener("click", async () => {
         });
         await chrome.storage.local.set({ userData: { npm, password } });
 
-        displayLogMessage("Proses selesai!", CSSBgColors.logBgColor);
+        displayLogMessage("Process complete!", CSSBgColors.logBgColor);
         loginDefault();
-    }
-    catch (error) {
+
+        if (checkbox.checked) {
+            window.close();
+        }
+    } catch (error) {
         displayLogMessage(error.message, CSSBgColors.errorBgColor);
         loginDefault();
     }
