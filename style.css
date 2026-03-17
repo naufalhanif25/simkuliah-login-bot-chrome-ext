@@ -2,7 +2,7 @@
     --log-bg-color: oklch(87.1% 0.15 154.449);
     --warn-bg-color: oklch(92.4% 0.12 95.746);
     --error-bg-color: oklch(88.5% 0.062 18.334);
-    --button-default-bg-colot: oklch(82.8% 0.189 84.429);
+    --button-default-bg-color: oklch(82.8% 0.189 84.429);
     --button-hover-bg-color: oklch(76.9% 0.188 70.08);
 }
 
@@ -51,7 +51,7 @@ body {
     padding: 16px;
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 2px;
 }
 
 .main-container button {
@@ -59,7 +59,7 @@ body {
     padding: 8px 16px;
     border-radius: 24px;
     border: none;
-    background-color: var(--button-default-bg-colot);
+    background-color: var(--button-default-bg-color);
     cursor: pointer;
     transition: background-color 100ms ease-out;
 }
@@ -69,7 +69,7 @@ body {
 }
 
 .main-container button:active {
-    background-color: var(--button-default-bg-colot);
+    background-color: var(--button-default-bg-color);
 }
 
 .main-container .head-container {
@@ -88,7 +88,7 @@ body {
 .main-container .all-container {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 18px;
 }
 
 .main-container .head-container .popup-logo {
@@ -99,7 +99,7 @@ body {
 .form-container {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 14px;
 }
 
 .form-container span * {
@@ -176,4 +176,54 @@ body {
 
 .report-hyperlink:hover {
     color: oklch(55.2% 0.016 285.938);
+}
+
+#autoclose-checkbox {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+#autoclose-checkbox p {
+    font-size: 10pt;
+    line-height: 0%;
+    color: oklch(70.5% 0.015 286.067);
+}
+
+#autoclose-checkbox .checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    gap: 8px;
+}
+
+#autoclose-checkbox .checkbox input {
+    display: none;
+}
+
+#autoclose-checkbox .checkbox .checkmark {
+    width: 14px;
+    height: 14px;
+    border-color: oklch(55.2% 0.016 285.938);
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 2px;
+    position: relative;
+    padding: 1px;
+}
+
+#autoclose-checkbox .checkbox .checkmark span {
+    width: 100%;
+    height: 100%;
+    background-color: var(--button-default-bg-color);
+    border-radius: 1px;
+    opacity: 0;
+}
+
+#autoclose-checkbox .checkbox input:checked + .checkmark span {
+    opacity: 1;
 }
