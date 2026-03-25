@@ -163,6 +163,7 @@ body {
     text-align: center;
     font-size: 10pt;
     color: rgba(0, 0, 0, 75%);
+    overflow: hidden;
 }
 
 .report-hyperlink {
